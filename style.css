@@ -1,0 +1,237 @@
+:root {
+    /*  colors  */
+    --btn-icon-clr: hsl(223, 87%, 63%);
+    --btn-icon-bg-hover-clr: hsl(223, 87%, 63%);
+    --icon-hover-bg-clr: hsl(255, 100%, 100%);
+    --input-border-clr: hsl(223, 100%, 88%);
+
+    /*  font styles  */
+    --ff: "Libre Franklin", sans-serif;
+    --fw-300: 300;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fs: clamp(.9rem, 2.5vw, 1.25rem);
+    --h1-clr: hsl(0, 0%, 59%);
+    --span-clr: hsl(209, 33%, 12%);
+
+
+    /*  Error states  */
+    --red-400: hsl(354, 100%, 66%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid lightcoral; */
+}
+
+img,
+svg {
+    display: block;
+    width: 100%;
+    min-width: 30px;
+}
+
+img {
+    max-width: 95%;
+}
+
+svg {
+    max-width: 50px;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--ff);
+    font-size: var(--fs);
+    padding: 3rem;
+    text-align: center;
+}
+
+header {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+h1 {
+    font-size: clamp(1.25rem, 5vw, 2rem);
+}
+
+h1 span {
+    color: var(--h1-clr);
+    font-weight: var(--fw-300);
+    /* line-height: 1.7; */
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.group {
+    gap: 1rem;
+}
+
+.h1-p {
+    font-size: var(--fs);
+    margin-bottom: 1.5rem;
+}
+
+input {
+    font-size: clamp(.65rem, 2vw, 1.25rem);
+    padding: clamp(.75rem, 2vw, 1.5rem);
+    border-radius: 1000px;
+    width: clamp(40%, 50vw, 55%);
+    border: 1px solid var(--input-border-clr);
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--input-border-clr);
+    font-weight: var(--fw-300);
+    transform: translateX(1rem); 
+    font-size: clamp(.65rem, 2vw, 1.25rem);
+    transition: 150ms ease-in-out;
+}
+
+@media screen and (width > 1003px) {
+        input:focus-visible::placeholder {
+        scale: 70%;
+        transform: translate(-6.5rem, -1rem);
+        transition: 150ms ease-in-out;
+    }
+
+    input {
+        padding-left: 3rem;
+    }
+}
+
+button {
+    cursor: pointer;
+    width: 35%;
+    padding: clamp(.75rem, 2vw, 1.5rem);
+    border-radius: 1000px;
+    border: none;
+    background-color: var(--btn-icon-clr);
+    box-shadow: 0 5px 4px 0px rgba(28, 0, 139, 0.089);
+    color: var(--icon-hover-bg-clr);
+    font-weight: var(--fw-300);
+    flex: 1;
+}
+
+button:hover {
+    background-color: hsl(223, 87%, 70%);
+}
+
+@media screen and (width < 495px) {
+        img {
+            max-width: 100%;
+        }
+
+        .group {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            min-width: 100%;
+        }
+
+        input {
+            min-width: 100%;
+        }
+
+        button {
+            min-width: 100%;
+        }
+}
+
+form {
+    min-width: 100%;
+    margin-bottom: 4rem;
+}
+
+section > img {
+    margin-bottom: 4rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    min-width: 100%;
+}
+
+a {
+    display: block;
+    border: 3px solid hsla(223, 100%, 88%, 0.199);
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+@media screen and (width < 530px) {
+    input::placeholder {
+        transform: translateX(.5rem); 
+    }
+
+    .footer-div {
+        gap: 1rem;
+    }
+
+    a {
+        border: 2px solid hsla(223, 100%, 88%, 0.199);
+        padding: .5rem;
+    }
+}
+
+.social-media:hover,
+.social-media:focus,
+.social-media:focus-visible,
+.social-media:focus-within,
+.social-media:active {
+    background-color: var(--btn-icon-bg-hover-clr);
+    border: 3px solid hsl(223, 86%, 63%);
+    transition: 300ms ease-in-out;
+} 
+
+svg {
+    fill: hsl(223, 86%, 63%);
+    border-radius: 50%;
+}
+
+.social-media:hover svg,
+.social-media:focus svg,
+.social-media:focus-visible svg,
+.social-media:focus-within svg,
+.social-media:active svg {
+    fill: hsl(0, 0%, 100%);
+    overflow: hidden;
+    transition: 300ms ease-in-out;
+}
+
+p.copyright {
+    color: rgba(128, 128, 128, 0.664);
+    font-weight: var(--fw-300);
+    font-size: clamp(.5rem, 2.5vw, 1rem);
+}
