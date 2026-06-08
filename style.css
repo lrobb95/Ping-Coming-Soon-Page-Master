@@ -85,12 +85,12 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.group {
+form {
     display: flex;
     gap: 1.5rem;
 }
 
-.group-2 {
+.group {
     width: 100%;
     flex-direction: column;
 }
@@ -103,6 +103,7 @@ input {
     border: 1px solid var(--input-border-clr);
     outline: none;
     width: 100%;
+    max-height: fit-content;
 }
 
 
@@ -129,6 +130,8 @@ input::placeholder {
 button {
     cursor: pointer;
     width: 35%;
+    max-height: fit-content;
+    font-size: clamp(.65rem, 2vw, 1.25rem);
     padding: clamp(.75rem, 2vw, 1.5rem);
     border-radius: 1000px;
     border: none;
@@ -136,7 +139,6 @@ button {
     box-shadow: 0 5px 4px 0px rgba(28, 0, 139, 0.089);
     color: var(--icon-hover-bg-clr);
     font-weight: var(--fw-300);
-    /* flex: 1; */
     transition: 150ms ease-in-out;
 }
 
@@ -150,7 +152,7 @@ button:hover {
             max-width: 100%;
         }
 
-        .group {
+        form {
             display: flex;
             align-content: center;
             justify-content: center;
