@@ -20,10 +20,13 @@
     <section>
       <h1><span>We are launching</span> soon!</h1>
       <p class="h1-p">Subscribe and get notified</p>
-      <form name="subscribe" method="post">
+      <form name="subscribe" id="form" method="GET" novalidate>
         <div class="group">
-          <input type="email" placeholder="Your email address...">
-          <button id="sbmBtn">Notify Me</button>
+          <div class="group-2">
+            <input id="emailInput" type="email" placeholder="Your email address...">
+            <div id="errorMessage"></div>
+          </div>
+            <button id="sbmBtn" type="submit">Notify Me</button>
         </div>
       </form>
       <img src="images/illustration-dashboard.png" alt="Illustration of a Line Chart Dashboard">

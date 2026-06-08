@@ -80,13 +80,19 @@ section {
     gap: 1.5rem;
 }
 
-.group {
-    gap: 1rem;
-}
-
 .h1-p {
     font-size: var(--fs);
     margin-bottom: 1.5rem;
+}
+
+.group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.group-2 {
+    width: 100%;
+    flex-direction: column;
 }
 
 input {
@@ -96,7 +102,9 @@ input {
     width: clamp(40%, 50vw, 55%);
     border: 1px solid var(--input-border-clr);
     outline: none;
+    width: 100%;
 }
+
 
 input::placeholder {
     color: var(--input-border-clr);
@@ -128,11 +136,13 @@ button {
     box-shadow: 0 5px 4px 0px rgba(28, 0, 139, 0.089);
     color: var(--icon-hover-bg-clr);
     font-weight: var(--fw-300);
-    flex: 1;
+    /* flex: 1; */
+    transition: 150ms ease-in-out;
 }
 
 button:hover {
     background-color: hsl(223, 87%, 70%);
+    transition: 150ms ease-in-out;
 }
 
 @media screen and (width < 495px) {
