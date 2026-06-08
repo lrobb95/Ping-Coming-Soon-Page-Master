@@ -18,9 +18,9 @@ form.addEventListener('submit', (e) => {
         e.preventDefault();
         email.style.border = '1px solid rgba(255, 0, 0, .35)';
         errorMessage.style.textAlign = 'left';
-        errorMessage.style.marginLeft = '3rem';
-        errorMessage.style.marginTop = '.5rem';
-        errorMessage.style.fontSize = '1rem';
+        errorMessage.style.marginLeft = 'clamp(1rem, 2.5vw, 3rem)';
+        errorMessage.style.marginTop = 'clamp(.25rem, 2.5vh, .5rem)';
+        errorMessage.style.fontSize = 'clamp(.65rem, 2vw, 1.25rem)';
         errorMessage.style.color = 'rgba(255, 0, 0, .35)';
         errorMessage.style.fontStyle = 'italic';
         errorMessage.innerText = message.join(', ');
